@@ -1,34 +1,42 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./index.module.css";
+import img_banner from "../public/img/banner1.jpg";
 
-import Post from '../components/post'
+function Banner() {
+  return (
+    <div className={styles.banner}>
+      <div className={styles.bannerRel}>
+        <div className={styles.bannerAbs}>
+          <img src={"/img/banner1.jpg"} />
+        </div>
 
-export async function getStaticProps() {
-  // fetch list of posts
-  const response = await fetch(
-    'https://jsonplaceholder.typicode.com/posts?_page=1'
-  )
-  const postList = await response.json()
-  return {
-    props: {
-      postList,
-    },
-  }
+        <div className={styles.bannerContent}>
+          <div className={styles.bannerContentBox}>
+            <div className={styles.bannerTitle}>
+              <div>Welcome</div>
+              <div>to AWARE!</div>
+            </div>
+            <div className={styles.bannerText}>
+              Join the wom(b)manhood to raise awareness for gender equality!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function IndexPage({ postList }) {
   return (
-    <main>
+    <div>
       <Head>
-        <title>Home page</title>
+        <title>AWARE NFT</title>
       </Head>
 
-      <h1>List of posts</h1>
+      <Banner />
 
-      <section>
-        {postList.map((post) => (
-          <Post {...post} key={post.id} />
-        ))}
-      </section>
-    </main>
-  )
+      <div className={styles.content}>asdfadf</div>
+    </div>
+  );
 }
