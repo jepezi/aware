@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "./index.module.css";
 import img_banner from "../public/img/banner1.jpg";
 
