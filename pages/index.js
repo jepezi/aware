@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "./index.module.css";
+import { FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa";
 
 function Banner() {
   return (
@@ -15,7 +16,7 @@ function Banner() {
         </div>
         <div style={{ marginTop: 32 }}>
           <a
-            href="https://opensea.io/"
+            href="https://opensea.io/collection/awarenft"
             target="_blank"
             className={styles.buttonOutline}
           >
@@ -66,7 +67,7 @@ export default function IndexPage({ postList }) {
       <Section>
         <Left>
           <h2 className={styles.sectionTitle1}>FAQ</h2>
-          <h3 className={styles.sectionTitle2}>
+          <h3 className={styles.sectionFAQ2}>
             Why do your drawings look like wombs?
           </h3>
           <div className={styles.sectionText}>
@@ -77,7 +78,7 @@ export default function IndexPage({ postList }) {
             cartoon characters are a way to celebrate, empower, vent, and
             commiserate wom(b)manhood.{" "}
           </div>
-          <h3 className={styles.sectionTitle2}>Are those hands ovaries?</h3>
+          <h3 className={styles.sectionFAQ2}>Are those hands ovaries?</h3>
           <div className={styles.sectionText}>
             No, they are furry paws. Actually we wanted to make them look really
             creepy and scare people. They were drawn after having mood swings
@@ -89,6 +90,46 @@ export default function IndexPage({ postList }) {
           <img src={"/img/aware11.png"} alt="" />
         </Right>
       </Section>
+
+      <div style={{ textAlign: "center", marginTop: 44 }}>
+        <div className={styles.footerTextBig1}>Enough chit chat.</div>
+        <div className={styles.footerTextBig2}>Wombs are being born!</div>
+        <div style={{ marginTop: 24 }}>
+          <a
+            href="https://opensea.io/collection/awarenft"
+            target="_blank"
+            className={styles.buttonOutlineBlack}
+          >
+            Available on OpenSea
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.footerTextBig3}>#AWAREnft</div>
+
+      <div style={{ textAlign: "center", marginTop: 44, paddingBottom: 104 }}>
+        <a
+          href="https://www.instagram.com/awarenft/"
+          target="_blank"
+          className={styles.footerLink}
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://twitter.com/AWAREnft"
+          target="_blank"
+          className={styles.footerLink}
+        >
+          <FaTwitter />
+        </a>
+        <a
+          href="http://discord.gg/3rcdchqq"
+          target="_blank"
+          className={styles.footerLink}
+        >
+          <FaDiscord />
+        </a>
+      </div>
     </div>
   );
 }
